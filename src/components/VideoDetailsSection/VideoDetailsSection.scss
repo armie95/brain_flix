@@ -1,0 +1,62 @@
+.video-details-section {
+    color: #333133;
+    padding: 0 8%;
+
+    &__title {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 2.88rem;
+        border-bottom: 2px solid #e1e1e1;
+        padding-bottom: 1rem;
+        margin-bottom: 0.40rem;
+    }
+
+
+    &__statistics-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #e1e1e1;
+        padding: 0 0.30rem;
+    }
+
+    &__channel {
+        font-weight: bold;
+    }
+
+    &__date {
+        color: #b1afb1;
+    }
+
+    &__views-and-likes {}
+
+    &__likes-container {}
+
+    &__views-icon {
+        display: inline-block;
+    }
+
+    &__likes-icon {
+        display: inline-block;
+    }
+
+    &__views {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        color: #b1afb1;
+    }
+
+    &__likes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        color: #b1afb1;
+    }
+
+    &__description {
+        line-height: 1.55rem;
+    }
+}
