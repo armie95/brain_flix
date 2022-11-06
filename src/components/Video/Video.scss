@@ -1,0 +1,56 @@
+.video {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+
+    &__left-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 1 180px;
+        height: 100px;
+    }
+
+    &__right-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 2 1;
+        // padding: 0.5rem 0;
+
+        line-height: 1.45rem;
+
+        color: #333;
+    }
+
+    &__img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px #eaeaea solid;
+
+        background-color: #E1E1E1;
+
+        transition: background-colo 200ms ease-in-out;
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 2/1.5;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    &__channel {
+        margin: 0;
+    }
+}
