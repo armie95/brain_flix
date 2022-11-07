@@ -1,8 +1,9 @@
+@import "../../styles/partials/global";
+
 .new-comment-form {
 
-
     // Add Error Border color change : a 1px border using the color #D22D2D
-    border-bottom: 2px #e3e3e3 solid;
+    border-bottom: 2px $border-color solid;
     padding: 0 0 1rem 0;
     margin: 0 1.4rem 1rem;
 
@@ -34,11 +35,7 @@
     }
 
     &__user-img {
-        max-width: 45px;
-        height: 45px;
-        object-fit: cover;
-        object-position: left center;
-        border-radius: 50%;
+        @include avatar();
     }
 
     &__input-group {
@@ -48,7 +45,7 @@
     }
 
     &__label {
-        color: #b1afb1;
+        color: $secondary-text-color-light-gray;
         font-weight: 600;
         font-size: 1.35rem;
     }
@@ -56,48 +53,50 @@
     &__input {
         height: 140px;
         padding: 1rem;
-        border-radius: 5px;
-        resize: none;
-
-        border-width: 2px;
-        border-color: #e3e3e3;
-
-        outline-color: #0294ff;
-
-        &::placeholder {
-            color: #333;
-        }
+        @include input-style();
     }
 
     &__submit-btn {
-        border: none;
-        height: 60px;
-        border-radius: 5px;
-        background-color: #0294ff;
-        color: white;
-        font-weight: bold;
-        font-size: 1.25rem;
-        position: relative;
+        @include btn-style("../../assets/Icons/add_comment.svg");
+    }
+}
 
-        transition: background-color 300ms ease-in-out;
+@include breakpoint(desktop) {
+    .new-comment-form {
+        @include wrapper();
+        justify-content: center;
+        align-items: center;
+        padding-right: 1rem;
+        margin-right: 0;
+        width: 92%;
 
-        &:hover {
-            background-color: #007cd5;
+        &__row {
+            width: 100%;
+            margin-left: auto;
+            // padding-right: 0;
         }
 
-        &::before {
-            content: "";
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            width: 20px;
-            height: 20px;
+        &__input-group {
+            // width: 80%
+            flex: 1 1;
 
-            transform: translateY(-50%);
+        }
 
-            background-image: url("../../assets/Icons/add_comment.svg");
-            background-position: center;
-            background-repeat: no-repeat;
+        &__input {
+            height: 60px;
+            padding-top: 1.3rem;
+        }
+
+        &__right-col {
+            flex-direction: row;
+            gap: 2rem;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        &__submit-btn {
+            width: 180px;
+            font-size: 1rem;
         }
     }
 }

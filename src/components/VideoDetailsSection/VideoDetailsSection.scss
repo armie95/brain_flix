@@ -1,14 +1,20 @@
+@import "../../styles/partials/global";
+
 .video-details-section {
-    color: #333133;
+    color: $text-dark;
     padding: 0 8%;
+
+    &__comments-count {
+        font-weight: bold;
+    }
 
     &__title {
         font-size: 2rem;
         font-weight: bold;
         line-height: 2.88rem;
-        border-bottom: 2px solid #e1e1e1;
+        border-bottom: 2px solid $border-color;
         padding-bottom: 1rem;
-        margin-bottom: 0.40rem;
+        margin-bottom: 0rem;
     }
 
 
@@ -16,19 +22,23 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 2px solid #e1e1e1;
+        border-bottom: 2px solid $border-color;
         padding: 0 0.30rem;
     }
 
     &__channel {
         font-weight: bold;
+        font-size: 1rem;
     }
 
     &__date {
         color: #b1afb1;
+        font-size: 1rem;
     }
 
     &__views-and-likes {}
+
+    &__channel-and-date {}
 
     &__likes-container {}
 
@@ -58,5 +68,50 @@
 
     &__description {
         line-height: 1.55rem;
+    }
+}
+
+
+@include breakpoint(tablet) {
+    .video-details-section {
+        &__title {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        &__statistics-container {
+            justify-content: space-between;
+            padding-bottom: 0;
+        }
+
+        &__views-and-likes {
+            display: flex;
+            flex: 0 1 auto;
+            gap: 3rem;
+        }
+
+        &__channel-and-date {
+            display: flex;
+            flex: 0 1 auto;
+            gap: 3rem;
+        }
+
+        & h5 {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+@include breakpoint(desktop) {
+    .video-details-section {
+        padding-right: 0;
+
+        &__statistics-container {
+            padding-right: 1rem;
+        }
+
+        &__description {
+            padding-right: 1rem;
+        }
     }
 }

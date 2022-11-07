@@ -7,6 +7,7 @@ const VideoDetailsSection = ({ video }) => {
   const timestampToDate = (timestamp) => {
     return new Date(timestamp).toLocaleDateString();
   };
+
   return (
     <section className="video-details-section">
       <h3 className="video-details-section__title">{video?.title}</h3>
@@ -37,7 +38,7 @@ const VideoDetailsSection = ({ video }) => {
                 alt="Likes Counter"
                 className="video-details-section__likes-icon"
               />
-              {video.views}
+              {video.likes}
             </h5>
           </div>
         </div>
@@ -51,6 +52,9 @@ const VideoDetailsSection = ({ video }) => {
         won the event for the second time -- eight years after his first Red Cow
         Rampage title
       </p>
+      <h3 className="video-details-section__comments-count">
+        {video.comments.length} Comments
+      </h3>
     </section>
   );
 };

@@ -1,3 +1,5 @@
+@import "../../styles/partials/global";
+
 .videos-list {
     display: flex;
     flex-direction: column;
@@ -5,4 +7,17 @@
     // background-color: rgba(255, 105, 180, 0.341);
     padding: 0 1rem;
     margin-bottom: 1rem;
+
+    &__title {
+        color: $secondary-text-color-light-gray;
+        font-size: 1.1em;
+        margin: 1rem 0;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    @include breakpoint(desktop) {
+        max-width: 380px;
+        row-gap: .5rem;
+    }
 }
