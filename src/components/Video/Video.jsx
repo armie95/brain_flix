@@ -1,9 +1,9 @@
 import React from "react";
 import "./Video.scss";
 
-const Video = ({ video, onSelectVideo }) => {
+const Video = ({ video, onVideoClickHandler }) => {
   return (
-    <div className="video" onClick={() => onSelectVideo(video.id)}>
+    <div className="video" onClick={() => onVideoClickHandler(video.id)}>
       <div className="video__left-col">
         <div className="video__img-container">
           <img src={video.image} alt="Video thumbnail" className="video__img" />

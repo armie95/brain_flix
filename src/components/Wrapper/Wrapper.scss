@@ -1,8 +1,0 @@
-@import "../../styles/partials/global";
-
-@include breakpoint(desktop) {
-    .wrapper {
-        @include wrapper();
-        display: flex;
-    }
-}
