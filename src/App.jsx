@@ -1,13 +1,10 @@
-import Navbar from './components/Navbar/Navbar'
-import Loader from './components/Loader/Loader'
-import Home from './Pages/Home'
 import './App.scss'
+import Router from './components/Router/Router'
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Home />
+      <Router />
     </div>
   )
 }
