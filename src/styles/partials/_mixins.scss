@@ -42,6 +42,7 @@
     resize: none;
     border: 2px solid $input-border-color;
     outline-color: $btn-bg;
+    background-color: $input-bg-color;
 
     &::placeholder {
         color: $text-dark;

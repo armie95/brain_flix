@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
 import CommentsSection from '../components/CommentsSection/CommentsSection'
 import Container from '../components/Container/Container'
 import NewCommentForm from '../components/NewCommentForm/NewCommentForm'
@@ -15,6 +16,8 @@ const Home = () => {
   const [videosList, setVideosList] = useState([])
   const [originalVideosList, setOriginalVideosList] = useState([])
   const [currentVideo, setCurrentVideo] = useState(null)
+  let navigate = useNavigate()
+  let params = useParams()
 
   //! function to fetch the videos list from the API:
   async function fetchVideosList() {
@@ -25,14 +28,12 @@ const Home = () => {
     setOriginalVideosList(data)
 
     const firstVideoID = data[0].id
-    onVideoClickHandler(firstVideoID)
+    navigate('/' + firstVideoID)
   }
 
   useEffect(() => {
     fetchVideosList()
   }, [])
-
-  // useEffect(() => {}, [videosList])
 
   useEffect(() => {
     setVideosList(
@@ -40,8 +41,14 @@ const Home = () => {
     )
   }, [currentVideo])
 
-  // ! Fetch a video details and change the currnet viddo state to the video with the id provided.:
-  const onVideoClickHandler = async (videoID) => {
+  useEffect(() => {
+    const { videoId } = params
+    if (videoId) {
+      handelVideoIdChange(videoId)
+    }
+  }, [params.videoId])
+
+  const handelVideoIdChange = async (videoID) => {
     const response = await axios.get(
       API_URL + VideosEndPoint + videoID + '/' + API_KEY
     )
@@ -57,10 +64,7 @@ const Home = () => {
           <NewCommentForm />
           <CommentsSection video={currentVideo} />
         </Container>
-        <VideosList
-          videosList={videosList}
-          onVideoClickHandler={onVideoClickHandler}
-        />
+        <VideosList videosList={videosList} />
       </Container>
     </>
   )

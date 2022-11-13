@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from '../../assets/logo/BrainFlix-logo.svg'
 import profileImage from '../../assets/Images/Mohan-muruge.jpg'
-import uploadIcon from '../../assets/Icons/upload.svg'
 import './Navbar.scss'
 
 const Navbar = () => {
