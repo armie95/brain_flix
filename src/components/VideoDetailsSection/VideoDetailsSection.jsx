@@ -1,12 +1,12 @@
-import React from "react";
-import "./VideoDetailsSection.scss";
-import likesIcons from "../../assets/Icons/likes.svg";
-import viewsIcons from "../../assets/Icons/views.svg";
+import React from 'react'
+import './VideoDetailsSection.scss'
+import likesIcons from '../../assets/Icons/likes.svg'
+import viewsIcons from '../../assets/Icons/views.svg'
 
 const VideoDetailsSection = ({ video }) => {
   const timestampToDate = (timestamp) => {
-    return new Date(timestamp).toLocaleDateString();
-  };
+    return new Date(timestamp).toLocaleDateString()
+  }
 
   return (
     <section className="video-details-section">
@@ -28,7 +28,7 @@ const VideoDetailsSection = ({ video }) => {
                 alt="views Counter"
                 className="video-details-section__views-icon"
               />
-              {video.views}
+              {video?.views}
             </h5>
           </div>
           <div className="video-details-section__likes-container">
@@ -38,17 +38,17 @@ const VideoDetailsSection = ({ video }) => {
                 alt="Likes Counter"
                 className="video-details-section__likes-icon"
               />
-              {video.likes}
+              {video?.likes}
             </h5>
           </div>
         </div>
       </div>
-      <p className="video-details-section__description">{video.description}</p>
+      <p className="video-details-section__description">{video?.description}</p>
       <h3 className="video-details-section__comments-count">
-        {video.comments.length} Comments
+        {video?.comments?.length} Comments
       </h3>
     </section>
-  );
-};
+  )
+}
 
-export default VideoDetailsSection;
+export default VideoDetailsSection

@@ -1,5 +1,5 @@
-import React from "react";
-import "./Video.scss";
+import React from 'react'
+import './Video.scss'
 
 const Video = ({ video, onVideoClickHandler }) => {
   return (
@@ -15,7 +15,7 @@ const Video = ({ video, onVideoClickHandler }) => {
         <p className="video__channel">{video.channel}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Video;
+export default Video
