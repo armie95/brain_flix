@@ -51,6 +51,17 @@
         @include btn-style("../../assets/Icons/upload.svg");
         order: 1;
     }
+
+    &__home-link {
+        display: block;
+        order: 0;
+    }
+
+    &__upload-link {
+        display: block;
+        width: 100%;
+        order: 4;
+    }
 }
 
 
@@ -80,6 +91,11 @@
         }
 
         &__profile-image-container {
+            order: 2;
+        }
+
+        &__upload-link {
+            width: 200px;
             order: 2;
         }
     }

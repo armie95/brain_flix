@@ -1,13 +1,16 @@
-import React from "react";
-import logo from "../../assets/logo/BrainFlix-logo.svg";
-import profileImage from "../../assets/Images/Mohan-muruge.jpg";
-import uploadIcon from "../../assets/Icons/upload.svg";
-import "./Navbar.scss";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import logo from '../../assets/logo/BrainFlix-logo.svg'
+import profileImage from '../../assets/Images/Mohan-muruge.jpg'
+import uploadIcon from '../../assets/Icons/upload.svg'
+import './Navbar.scss'
 
 const Navbar = () => {
   return (
     <nav className="nav">
-      <img src={logo} alt="Brain Flix logo" className="nav__logo" />
+      <NavLink to="/" className="nav__home-link">
+        <img src={logo} alt="Brain Flix logo" className="nav__logo" />
+      </NavLink>
       <div className="nav__search-container">
         <input
           className="nav__search-input"
@@ -16,10 +19,11 @@ const Navbar = () => {
           id="search"
           placeholder="Search"
         />
-        <button className="nav__upload-btn">
-          <div className="nav__upload-icon"></div> upload
-        </button>
-
+        <NavLink to="/upload" className="nav__upload-link">
+          <button className="nav__upload-btn">
+            <div className="nav__upload-icon"></div> upload
+          </button>
+        </NavLink>
         <div className="nav__profile-image-container">
           <img
             src={profileImage}
@@ -29,7 +33,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
