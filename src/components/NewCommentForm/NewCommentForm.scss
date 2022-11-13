@@ -61,7 +61,11 @@
     }
 }
 
-@include breakpoint(desktop) {
+@include breakpoint(tablet) {
+
+    // }
+
+    // @include breakpoint(desktop) {
     .new-comment-form {
         @include wrapper();
         justify-content: center;

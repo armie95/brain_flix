@@ -1,73 +1,70 @@
 @mixin wrapper() {
-    max-width: 1920px;
-    width: 80%;
-    margin: 0 auto;
+  max-width: 1920px;
+  width: 80%;
+  margin: 0 auto;
 }
 
-@mixin btn-style($bg-img-url:"") {
-    border: none;
-    width: 100%;
-    height: 60px;
-    border-radius: 5px;
-    background-color: $btn-bg;
-    color: $btn-text-color;
-    font-weight: bold;
-    font-size: 1.25rem;
-    position: relative;
-    text-transform: uppercase;
+@mixin btn-style($bg-img-url: '') {
+  border: none;
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  background-color: $btn-bg;
+  color: $btn-text-color;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  text-transform: uppercase;
 
-    transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 
-    &:hover {
-        background-color: $btn-bg-hover-color;
-    }
+  &:hover {
+    background-color: $btn-bg-hover-color;
+  }
 
-    &::before {
-        content: "";
-        position: absolute;
-        left: 1rem;
-        top: 50%;
-        width: 20px;
-        height: 20px;
-        transform: translateY(-50%);
+  &::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
 
-        background-image: url($bg-img-url);
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+    background-image: url($bg-img-url);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 @mixin input-style() {
-    border-radius: 5px;
-    resize: none;
-    border: 2px solid $input-border-color;
-    outline-color: $btn-bg;
-    background-color: $input-bg-color;
+  border-radius: 5px;
+  resize: none;
+  border: 2px solid $input-border-color;
+  outline-color: $btn-bg;
+  background-color: $input-bg-color;
 
-    &::placeholder {
-        color: $text-dark;
-    }
+  &::placeholder {
+    color: $text-dark;
+  }
 }
 
 @mixin avatar() {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: -5px center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: -5px center;
 }
 
-
 @mixin breakpoint($point) {
-    @if $point==tablet {
-        @media screen and (min-width: 768px) {
-            @content;
-        }
+  @if $point==tablet {
+    @media screen and (min-width: 768px) {
+      @content;
     }
-
-    @else if $point==desktop {
-        @media screen and (min-width: 1280px) {
-            @content;
-        }
+  } @else if $point==desktop {
+    @media screen and (min-width: 1280px) {
+      @content;
     }
+  }
 }
