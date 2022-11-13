@@ -6,11 +6,12 @@ const UploadForm = () => {
   const handleUpload = (e) => {
     e.preventDefault()
     console.log('Upload')
-    alert('Submitted successfully')
+    alert('The new video has been uploaded successfully!')
   }
 
   const handleCancel = (e) => {
     e.preventDefault()
+    alert("You've cancelled the upload")
   }
 
   return (

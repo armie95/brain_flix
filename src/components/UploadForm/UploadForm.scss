@@ -55,7 +55,7 @@
 
     &__description__input {
         resize: none;
-        height: 100px;
+        height: 160px;
     }
 
     &__btn-group {
@@ -81,8 +81,7 @@
 
     &__submit-btn,
     &__cancel-btn {
-        font-weight: 400;
+        font-weight: 500;
+        font-size: 1rem;
     }
 }
-
-;

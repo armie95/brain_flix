@@ -53,6 +53,9 @@ const Home = () => {
       API_URL + VideosEndPoint + videoID + '/' + API_KEY
     )
     setCurrentVideo(response.data)
+
+    // window.scrollTo(0, 0)
+    window.location = '#top'
   }
 
   return (

@@ -6,7 +6,7 @@ import './Navbar.scss'
 
 const Navbar = () => {
   return (
-    <nav className="nav">
+    <nav className="nav" id="top">
       <NavLink to="/" className="nav__home-link">
         <img src={logo} alt="Brain Flix logo" className="nav__logo" />
       </NavLink>
