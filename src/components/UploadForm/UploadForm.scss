@@ -1,16 +1,16 @@
 @import '../../styles/partials/global';
 
 .upload-form {
-    display: block;
-    width: 100%;
+    display   : block;
+    width     : 100%;
     border-top: 2PX solid $border-color;
-    padding: 0.5rem 1rem;
+    padding   : 0.5rem 1rem;
 
     &__title {
-        font-size: 2rem;
+        font-size  : 2rem;
         font-weight: 500;
-        margin: 0;
-        margin: 1rem 0 1.5rem;
+        margin     : 0;
+        margin     : 1rem 0 1.5rem;
     }
 
     &__image-container {
@@ -19,34 +19,34 @@
 
     &__label,
     &__title__label {
-        color: $secondary-text-color-light-gray;
+        color         : $secondary-text-color-light-gray;
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight   : 500;
         padding-bottom: 5px;
-        display: block;
+        display       : block;
     }
 
     &__img {
-        max-width: 100%;
-        border-radius: 4px;
+        max-width            : 100%;
+        border-radius        : 4px;
         -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -ms-border-radius: 4px;
-        -o-border-radius: 4px;
+        -moz-border-radius   : 4px;
+        -ms-border-radius    : 4px;
+        -o-border-radius     : 4px;
     }
 
     &__title__label,
     &__description__label {
-        color: $secondary-text-color-light-gray;
+        color         : $secondary-text-color-light-gray;
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight   : 500;
     }
 
     &__title__input,
     &__description__input {
-        width: 100%;
-        padding: 10px;
-        border: 2px solid $input-border-color;
+        width        : 100%;
+        padding      : 10px;
+        border       : 2px solid $input-border-color;
         border-radius: 5px;
         border-radius: 5px;
         margin-bottom: 1.5rem;
@@ -59,29 +59,87 @@
     }
 
     &__btn-group {
-        display: flex;
+        display       : flex;
         flex-direction: column;
-        gap: 1rem;
+        gap           : 1rem;
     }
 
     &__submit-btn {
         @include btn-style('../../assets/Icons/publish.svg');
+        order: 1;
     }
+
 
     &__cancel-btn {
         @include btn-style();
         background-color: transparent;
-        color: $btn-bg;
+        color           : $btn-bg;
+        order           : 2;
 
         &:hover {
             background-color: $btn-bg;
-            color: $btn-text-color;
+            color           : $btn-text-color;
         }
     }
 
-    // &__submit-btn,
-    // &__cancel-btn {
-    //     font-weight: 500;
-    //     font-size: 1rem;
-    // }
+
+    @include breakpoint(tablet) {
+
+        &__title__input,
+        &__submit-btn {
+            height: 55px;
+        }
+
+        &__btn-group {
+            flex-direction : row;
+            justify-content: end;
+        }
+
+        &__submit-btn,
+        &__cancel-btn {
+            max-width: 200px;
+        }
+
+        &__submit-btn {
+            order: 2;
+        }
+
+        &__cancel-btn {
+            order: 1;
+        }
+
+        &__image-container {
+            max-width: 480px;
+        }
+
+
+    }
+
+    @include breakpoint(desktop) {
+        @include wrapper();
+
+        &__img-input-wrapper {
+            display       : flex;
+            column-gap    : 1rem;
+            padding-top   : 2rem;
+            padding-bottom: 1rem;
+
+            border-top   : 2px solid $input-border-color;
+            border-bottom: 2px solid $input-border-color;
+            margin-bottom: 2rem;
+        }
+
+        &__image-container {
+            height: 200px;
+        }
+
+
+        &__inputs-container {
+            flex: 2 1;
+        }
+
+
+        &__description__input {}
+    }
+
 }

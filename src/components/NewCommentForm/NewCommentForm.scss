@@ -1,37 +1,32 @@
-@import "../../styles/partials/global";
+@import '../../styles/partials/global';
 
 .new-comment-form {
-
     // Add Error Border color change : a 1px border using the color #D22D2D
     border-bottom: 2px $border-color solid;
-    padding: 0 0 1rem 0;
-    margin: 0 1.4rem 1rem;
+    padding      : 0 0 1rem 0;
+    margin       : 0 1.4rem 1rem;
 
     &__row {
-        display: flex;
-        column-gap: 1rem;
+        display        : flex;
+        column-gap     : 1rem;
         justify-content: center;
-        align-items: stretch;
-        padding: 0 1rem 0;
-
-        // background-color: rgba(144, 238, 144, 0.519);
+        align-items    : stretch;
+        padding        : 0 1rem 0;
     }
 
     &__left-col {
-        display: flex;
-        align-items: flex-start;
+        display        : flex;
+        align-items    : flex-start;
         justify-content: center;
-        // background-color: rgba(255, 0, 0, 0.208);
 
         padding-top: 1.85rem;
     }
 
     &__right-col {
-        display: flex;
+        display       : flex;
         flex-direction: column;
-        row-gap: 1rem;
-        // background-color: rgba(255, 105, 180, 0.348);
-        flex: 3 1;
+        row-gap       : 1rem;
+        flex          : 3 1;
     }
 
     &__user-img {
@@ -39,68 +34,64 @@
     }
 
     &__input-group {
-        display: flex;
-        row-gap: .25rem;
+        display       : flex;
+        row-gap       : 0.25rem;
         flex-direction: column;
     }
 
     &__label {
-        color: $secondary-text-color-light-gray;
-        font-weight: 600;
-        font-size: 1.35rem;
+        color         : $secondary-text-color-light-gray;
+        font-weight   : 500;
+        font-size     : 0.85rem;
+        text-transform: uppercase;
     }
 
     &__input {
-        height: 140px;
-        padding: 1rem;
         @include input-style();
+        height : 140px;
+        padding: 1rem;
     }
 
     &__submit-btn {
-        @include btn-style("../../assets/Icons/add_comment.svg");
+        @include btn-style('../../assets/Icons/add_comment.svg');
     }
 }
 
 @include breakpoint(tablet) {
-
-    // }
-
-    // @include breakpoint(desktop) {
     .new-comment-form {
         @include wrapper();
         justify-content: center;
-        align-items: center;
-        padding-right: 1rem;
-        margin-right: 0;
-        width: 92%;
+        align-items    : center;
+        padding-right  : 1rem;
+        margin-right   : 0;
+        width          : 92%;
 
         &__row {
-            width: 100%;
+            width      : 100%;
             margin-left: auto;
-            // padding-right: 0;
         }
 
         &__input-group {
-            // width: 80%
             flex: 1 1;
-
         }
 
         &__input {
-            height: 60px;
-            padding-top: 1.3rem;
+            height     : 55px;
+            padding-top: 1rem;
+            overflow   : hidden;
         }
 
         &__right-col {
-            flex-direction: row;
-            gap: 2rem;
+            flex-direction : row;
+            gap            : 2rem;
             justify-content: center;
-            align-items: flex-end;
+            align-items    : flex-end;
         }
 
         &__submit-btn {
-            width: 180px;
+            width    : 210px;
             font-size: 1rem;
+            height   : 55px;
         }
     }
 }

@@ -20,4 +20,11 @@
         max-width: 380px;
         row-gap: .5rem;
     }
+
+    @include breakpoint(tablet) {
+        @include wrapper();
+        width: 94%;
+        padding-right: 0;
+        margin-right: 0;
+    }
 }

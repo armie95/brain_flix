@@ -13,14 +13,12 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 1rem 0;
-        // background-color: rgba(144, 238, 144, 0.519);
     }
 
     &__left-col {
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        // background-color: rgba(255, 0, 0, 0.208);
 
         padding-top: 0.8rem;
     }
@@ -28,7 +26,6 @@
     &__right-col {
         display: flex;
         flex-direction: column;
-        // background-color: rgba(255, 105, 180, 0.348);
         flex: 3 1;
     }
 
@@ -58,4 +55,20 @@
         padding-bottom: 1rem;
         line-height: 1.4rem;
     }
+
+
+
+    @include breakpoint(tablet) {
+        @include wrapper();
+        width: 94%;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    @include breakpoint(desktop) {
+        width: 98%;
+        padding-left: 0;
+    }
 }
+    
+    

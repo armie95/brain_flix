@@ -8,6 +8,7 @@ import VideoPlayer from '../components/VideoPlayer/VideoPlayer'
 import VideosList from '../components/VideosList/VideosList'
 import axios from 'axios'
 
+//! Constants:
 const API_URL = 'https://project-2-api.herokuapp.com/'
 const API_KEY = '?api_key=4a33759a-a8e6-4bfa-9287-73814c966efd'
 const VideosEndPoint = 'videos/'
@@ -53,9 +54,8 @@ const Home = () => {
       API_URL + VideosEndPoint + videoID + '/' + API_KEY
     )
     setCurrentVideo(response.data)
-
-    // window.scrollTo(0, 0)
-    window.location = '#top'
+    // window.location.hash = ''
+    window.location.hash = '#top'
   }
 
   return (
