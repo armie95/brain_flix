@@ -54,7 +54,6 @@ const Home = () => {
       API_URL + VideosEndPoint + videoID + '/' + API_KEY
     )
     setCurrentVideo(response.data)
-    // window.location.hash = ''
     window.location.hash = '#top'
   }
 

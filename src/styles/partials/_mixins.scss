@@ -1,20 +1,20 @@
 @mixin wrapper() {
   max-width: 1920px;
-  width    : 80%;
-  margin   : 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 @mixin btn-style($bg-img-url: '') {
-  border          : none;
-  width           : 100%;
-  height          : 50px;
-  border-radius   : 5px;
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
   background-color: $btn-bg;
-  color           : $btn-text-color;
-  font-weight     : 500;
-  font-size       : 1rem;
-  position        : relative;
-  text-transform  : uppercase;
+  color: $btn-text-color;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  text-transform: uppercase;
 
   transition: background-color 300ms ease-in-out;
 
@@ -23,31 +23,31 @@
   }
 
   &::before {
-    content            : '';
-    position           : absolute;
-    left               : 0.8em;
-    top                : 50%;
-    width              : 20px;
-    height             : 20px;
-    transform          : translateY(-50%);
-    background-image   : url($bg-img-url);
+    content: '';
+    position: absolute;
+    left: 0.8em;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+    background-image: url($bg-img-url);
     background-position: center;
-    background-repeat  : no-repeat;
-    background-size    : 1.4em;
-    -webkit-transform  : translateY(-50%);
-    -moz-transform     : translateY(-50%);
-    -ms-transform      : translateY(-50%);
-    -o-transform       : translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: 1.4em;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
   }
 }
 
 @mixin input-style() {
-  border-radius   : 5px;
-  resize          : none;
-  border          : 2px solid $border-color;
-  outline-color   : $btn-bg;
+  border-radius: 5px;
+  resize: none;
+  border: 2px solid $border-color;
+  outline-color: $btn-bg;
   background-color: $input-bg-color;
-  height          : 50px;
+  height: 40px;
 
   &::placeholder {
     color: $text-dark;
@@ -55,10 +55,10 @@
 }
 
 @mixin avatar() {
-  width          : 45px;
-  height         : 45px;
-  border-radius  : 50%;
-  object-fit     : cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
   object-position: -5px center;
 }
 

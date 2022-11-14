@@ -8,7 +8,7 @@ const VideoDetailsSection = ({ video }) => {
 
   return (
     <section className="video-details-section">
-      <h3 className="video-details-section__title">{video?.title}</h3>
+      <h1 className="video-details-section__title">{video?.title}</h1>
       <div className="video-details-section__statistics-container">
         <div className="video-details-section__channel-and-date">
           <h5 className="video-details-section__channel">

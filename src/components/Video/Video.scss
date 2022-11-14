@@ -19,7 +19,6 @@
         flex-direction: column;
         justify-content: space-between;
         flex: 2 1;
-        // padding: 0.5rem 0;
 
         line-height: 1.45rem;
 
@@ -54,15 +53,5 @@
 
     &__channel {
         margin: 0;
-    }
-
-
-    @include breakpoint(desktop) {
-        // background-color: rgba(255, 105, 180, 0.294);
-
-
-        &__left-col {}
-
-        &__right-col {}
     }
 }
