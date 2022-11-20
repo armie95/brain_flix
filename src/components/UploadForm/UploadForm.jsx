@@ -1,10 +1,12 @@
 import React from 'react'
 import './UploadForm.scss'
-import imagePlaceholder from '../../assets/Images/upload-video-preview.jpg'
+// import imagePlaceholder from '../../assets/Images/upload-video-preview.jpg'
 
+const imagePlaceholder = 'http://localhost:8080/images/upload-video-preview.jpg'
 const UploadForm = () => {
   const handleUpload = (e) => {
     e.preventDefault()
+    //TODO: Call to the api using axios post .
     console.log('Upload')
     alert('The new video has been uploaded successfully!')
   }

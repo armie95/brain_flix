@@ -9,8 +9,7 @@ import VideosList from '../components/VideosList/VideosList'
 import axios from 'axios'
 
 //! Constants:
-const API_URL = 'https://project-2-api.herokuapp.com/'
-const API_KEY = '?api_key=4a33759a-a8e6-4bfa-9287-73814c966efd'
+const API_URL = 'http://localhost:8080/'
 const VideosEndPoint = 'videos/'
 
 const Home = () => {
@@ -23,8 +22,8 @@ const Home = () => {
   //! function to fetch the videos list from the API:
   async function fetchVideosList() {
     try {
-      const response = await axios.get(API_URL + VideosEndPoint + API_KEY)
-      const data = response.data
+      const response = await axios.get(API_URL + VideosEndPoint)
+      const data = response.data.data
 
       setVideosList(data)
       setOriginalVideosList(data)
@@ -55,9 +54,7 @@ const Home = () => {
 
   const handelVideoIdChange = async (videoID) => {
     try {
-      const response = await axios.get(
-        API_URL + VideosEndPoint + videoID + '/' + API_KEY
-      )
+      const response = await axios.get(API_URL + VideosEndPoint + videoID + '/')
       setCurrentVideo(response.data)
       window.location.hash = '#top'
     } catch (err) {
