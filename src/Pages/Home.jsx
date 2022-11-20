@@ -22,14 +22,18 @@ const Home = () => {
 
   //! function to fetch the videos list from the API:
   async function fetchVideosList() {
-    const response = await axios.get(API_URL + VideosEndPoint + API_KEY)
-    const data = response.data
+    try {
+      const response = await axios.get(API_URL + VideosEndPoint + API_KEY)
+      const data = response.data
 
-    setVideosList(data)
-    setOriginalVideosList(data)
+      setVideosList(data)
+      setOriginalVideosList(data)
 
-    const firstVideoID = data[0].id
-    navigate('/' + firstVideoID)
+      const firstVideoID = data[0].id
+      navigate('/' + firstVideoID)
+    } catch (err) {
+      console.log(`There was an error ${err.message}`)
+    }
   }
 
   useEffect(() => {
@@ -50,11 +54,15 @@ const Home = () => {
   }, [params.videoId])
 
   const handelVideoIdChange = async (videoID) => {
-    const response = await axios.get(
-      API_URL + VideosEndPoint + videoID + '/' + API_KEY
-    )
-    setCurrentVideo(response.data)
-    window.location.hash = '#top'
+    try {
+      const response = await axios.get(
+        API_URL + VideosEndPoint + videoID + '/' + API_KEY
+      )
+      setCurrentVideo(response.data)
+      window.location.hash = '#top'
+    } catch (err) {
+      console.log(`There was an error ${err.message}`)
+    }
   }
 
   return (
