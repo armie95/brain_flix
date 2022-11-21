@@ -1,10 +1,9 @@
 import React from 'react'
 import UploadForm from '../components/UploadForm/UploadForm'
-
-const Upload = () => {
+const Upload = ({ navigate }) => {
   return (
     <>
-      <UploadForm />
+      <UploadForm navigate={navigate} />
     </>
   )
 }

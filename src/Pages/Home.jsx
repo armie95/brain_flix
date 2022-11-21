@@ -54,8 +54,8 @@ const Home = () => {
 
   const handelVideoIdChange = async (videoID) => {
     try {
-      const response = await axios.get(API_URL + VideosEndPoint + videoID + '/')
-      setCurrentVideo(response.data)
+      const response = await axios.get(API_URL + VideosEndPoint + videoID)
+      setCurrentVideo(response.data.data)
       window.location.hash = '#top'
     } catch (err) {
       console.log(`There was an error ${err.message}`)
