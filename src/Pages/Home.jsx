@@ -9,7 +9,7 @@ import VideosList from '../components/VideosList/VideosList'
 import axios from 'axios'
 
 //! Constants:
-const API_URL = 'http://localhost:8080/'
+const API_URL = 'https://armieflixapp-c847fb381259.herokuapp.com/'
 const VideosEndPoint = 'videos/'
 
 const Home = () => {

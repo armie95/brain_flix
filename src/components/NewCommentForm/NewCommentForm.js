@@ -1,6 +1,6 @@
-import React from "react";
-import "./NewCommentForm.scss";
-import userImage from "../../assets/Images/Mohan-muruge.jpg";
+import React from 'react'
+import './NewCommentForm.scss'
+import userImage from '../../assets/Images/Mohan-muruge.jpg'
 
 const NewCommentForm = () => {
   return (
@@ -31,7 +31,7 @@ const NewCommentForm = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NewCommentForm;
+export default NewCommentForm

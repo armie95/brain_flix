@@ -1,10 +1,11 @@
+/* eslint-disable-next-line */
 import axios from 'axios'
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './UploadForm.scss'
 // import imagePlaceholder from '../../assets/Images/upload-video-preview.jpg'
 
-const imagePlaceholder = 'http://localhost:8080/images/upload-video-preview.jpg'
+const imagePlaceholder = '../../assets/Images/upload-video-preview.jpg'
 
 const UploadForm = () => {
   const navigate = useNavigate()

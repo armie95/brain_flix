@@ -1,13 +1,14 @@
-import React from "react";
-import "./Comment.scss";
+import React from 'react'
+
+import './Comment.scss'
 
 const userImage =
-  "https://st3.depositphotos.com/9998432/13335/v/600/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.jpg";
+  'https://st3.depositphotos.com/9998432/13335/v/600/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.jpg'
 
 const Comment = ({ comment }) => {
   const timestampToDate = (timestamp) => {
-    return new Date(timestamp).toLocaleDateString();
-  };
+    return new Date(timestamp).toLocaleDateString()
+  }
 
   return (
     <div className="comment">
@@ -24,7 +25,7 @@ const Comment = ({ comment }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Comment;
+export default Comment
